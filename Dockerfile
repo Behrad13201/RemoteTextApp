@@ -4,8 +4,6 @@ WORKDIR /src
 
 COPY . .
 
-RUN ls -la
-
 RUN dotnet publish ASP.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
