@@ -4,7 +4,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet publish PCRemote/PCRemote.csproj -c Release -o /app/publish
+RUN dotnet publish asp.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
 
@@ -16,4 +16,4 @@ ENV ASPNETCORE_URLS=http://0.0.0.0:10000
 
 EXPOSE 10000
 
-ENTRYPOINT ["dotnet", "PCRemote.dll"]
+ENTRYPOINT ["dotnet", "asp.dll"]
